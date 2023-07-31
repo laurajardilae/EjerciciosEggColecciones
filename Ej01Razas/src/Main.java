@@ -10,7 +10,7 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in).useDelimiter("\n");
-        Razas razas = new Razas();
+        razaService razaService = new razaService();
         int opc;
         do {
             System.out.println("Seleccione una opción");
@@ -21,15 +21,15 @@ public class Main {
                 case 1:
                     System.out.println("Ingrese la raza:");
                     raza=entrada.next();
-                    razas.agregarRaza(raza);
+                    razaService.agregarRaza(raza);
                     break;
                 case 2:
-                    razas.verLista();
+                    razaService.verLista();
                     break;
                 case 3:
                     System.out.println("Ingrese la raza que desea eliminar de la lista:");
                     raza= entrada.next();
-                    razas.eliminarRaza(raza);
+                    razaService.eliminarRaza(raza);
                     break;
                 case 4:
                     System.out.println("Hasta luego");

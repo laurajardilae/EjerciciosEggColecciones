@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Razas {
+public class razaService {
     List<String> razasPerros = new ArrayList<>();
 
 
@@ -28,5 +28,7 @@ public class Razas {
         System.out.println(razasPerros.toString());
     }
 
-
+    public List<String> getRazasPerros() {
+        return razasPerros;
+    }
 }

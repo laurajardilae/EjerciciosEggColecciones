@@ -28,7 +28,6 @@ public class Alumno {
         this.notas = notas;
     }
 
-    @Override
     public String toString() {
         return "Alumno{" +
                 "nombre='" + nombre + '\'' +
