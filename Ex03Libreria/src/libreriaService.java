@@ -1,9 +1,11 @@
 import java.util.HashSet;
 import java.util.Scanner;
+import java.util.Set;
+import java.util.TreeSet;
 
 public class libreriaService {
     Scanner scan = new Scanner(System.in).useDelimiter("\n");
-    HashSet<Libro> libros = new HashSet<>();
+    Set<Libro> libros = new TreeSet<>();
     public void agregarNuevoLibro(){
         Libro libro = new Libro();
         System.out.println("Ingrese el titulo: ");

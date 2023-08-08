@@ -1,12 +1,12 @@
 import java.util.Objects;
 
-public class Libro {
+public class Libro implements Comparable<Libro>{
     private static int contador=0;
-    private int id;
+    private Integer id;
     private String titulo;
     private String autor;
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
@@ -68,16 +68,21 @@ public class Libro {
                 " - Total de ejemplares: " + totalEjemplares +
                 " - Ejemplares prestados: " + ejemplaresPrestados;
     }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Libro l = (Libro) o;
-        return Objects.equals(this.getTitulo(), l.getTitulo());
+        if (!(o instanceof Libro libro)) return false;
+        return Objects.equals(getTitulo(), libro.getTitulo()) && Objects.equals(getAutor(), libro.getAutor());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getTitulo());
+        return Objects.hash(getId(), getTitulo(), getAutor(), getTotalEjemplares(), getEjemplaresPrestados());
+    }
+
+    @Override
+    public int compareTo(Libro o) {
+        return this.id.compareTo(o.id);
     }
 }
