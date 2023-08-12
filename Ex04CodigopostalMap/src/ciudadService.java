@@ -8,7 +8,7 @@ public class ciudadService {
     private Scanner scan = new Scanner(System.in).useDelimiter("\n");
 
     public void verLista(){
-        ciudades.forEach((c, ciudad) -> System.out.printf("Código postal: %s, Ciudad: %s",c,ciudad.toString()));
+        ciudades.forEach((k, ciudad) -> System.out.printf("Código postal: %s, Ciudad: %s",k,ciudad.toString()));
     }
 
     public void buscarPorCodigo(){
@@ -20,6 +20,7 @@ public class ciudadService {
             System.out.println("Codigo postal no encontrado");
         }
     }
+
     public void ingresarNuevaCiudad(){
         System.out.println("Ingrese el codigo postal: ");
         String cod = scan.next();
